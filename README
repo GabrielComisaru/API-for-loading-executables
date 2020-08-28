@@ -1,0 +1,7 @@
+In implementarea temei am folosit un handler pentru semnalul SIGSEGV,
+generat la accesul de pagini invalide/ nemapate in memorie. Daca semnalul
+a fost generat in urma unor permisiuni necorespunzatoare, am apelat handlerul
+standard; altfel, am iterat prin toate segmentele programului si prin toate
+paginile din fiecare segment pentru a identifica pagina ce trebuie mapata in
+memorie. In campul data am memorat un vector pentru a identifica paginile
+deja mapate in memorie.
